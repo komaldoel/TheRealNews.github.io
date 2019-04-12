@@ -1,0 +1,72 @@
+
+
+/* :: Header Area CSS */
+.header-area1 {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: auto;
+    margin-top: 0px;
+    left: 0;
+    z-index: 300;
+	 background-color: #d12b2b;
+ 
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+}
+
+	
+
+@media only screen and (min-width: 100px) and (max-width: 990px) {
+    .header-area1  {
+		
+		 height: 10%;
+	   }
+}
+
+@media only screen and (min-width: 100px) and (max-width: 590px) {
+    .header-area1 img {
+width: 100px;
+height: 50px;
+
+}
+}
+
+.stick {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1300px) {
+ .stick {
+display:none;
+}
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .header-area .navbar .navbar-nav {
+        margin-right: 30px;
+    }
+}
+
+
+.header-area.sticky {
+    background-color: #d12b2b;
+    margin-top: 6px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+	
+}
+
+
+@media only screen and (min-width: 100px) and (max-width: 590px){
+.header-area1.sticky {
+    
+   }
+}
+
+
+.header-area.sticky .navbar {
+    border-color: #000000;
+}

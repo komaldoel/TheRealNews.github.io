@@ -1,0 +1,114 @@
+<html>
+<head>
+  	<link rel="stylesheet" type="text/css" href="registration1_style.css">  
+	<script>
+	function checkPass()
+	{
+    var pass1 = document.getElementById('pass1');
+    var pass2 = document.getElementById('pass2');
+    var message = document.getElementById('error-nwl');
+    var goodColor = "#66cc66";
+    var badColor = "#ff6666";
+
+    if(pass1.value == pass2.value){
+        pass2.style.backgroundColor = goodColor;
+        message.style.color = goodColor;
+        message.innerHTML = "ok!"
+    }
+    else{
+        pass2.style.backgroundColor = badColor;
+        message.style.color = badColor;
+        message.innerHTML = " These passwords don't match"
+    }
+	
+    if(pass1.length > 5){
+        pass1.style.backgroundColor = goodColor;
+        message.style.color = goodColor;
+        message.innerHTML = "character number ok!"
+    }
+    else{
+        pass1.style.backgroundColor = badColor;
+        message.style.color = badColor;
+        message.innerHTML = " you have to enter at least 6 digit!"
+    }
+}  	
+	</script>	
+</head>
+<body>
+<a href="home.php"><img src="cros.png" style="width:20px;height:20px;border:0;" align="right"></a>
+	
+	<form action="register_data.php" method="post">
+		<div class="container" align="center">
+			<h1><u>Register</u></h1>
+			<p>Please fill in this form to create an account.</p>
+			<hr>
+			<table>
+				<tr>
+					<td width=32%>
+						<label for="name"><b>Name</b></label>
+					</td>
+					<td>
+						<input type="text" placeholder="Enter Name" name="name" required><br>
+					</td>
+				</tr>	
+				<tr>
+					<td>
+						<label for="lastname"><b>User Name</b></label>
+					</td>
+					<td>
+						<input type="text" placeholder="Enter User Name" name="lastname" required><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="email"><b>Email ID</b></label>
+					</td>
+					<td>
+						<input type="text" placeholder="Enter Email" name="email" required><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="psw"><b>Password</b></label>
+					</td>
+					<td>
+						<input type="password" placeholder="Enter Password" name="psw" id="pass1" required><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="psw-repeat"><b>Confirm Password</b></label>
+					</td>
+					<td>
+						<input type="password" placeholder="Confirm Password" name="psw-repeat" id="pass2" onkeyup="checkPass(); return false;"required><br>
+					</td>
+				</tr>	
+			</table>
+			<select name="area" class="drop">
+				<option value=""><b>Select Area</b></option>
+				<option value="pathankot">Pathankot</option>
+				<option value="sujanpur">Sujanpur</option>
+				<option value="gurdaspur">Gurdaspur</option>
+				<option value="dinanagar">Dinanagar</option>
+				<option value="nurpur">Nurpur</option>
+			</select>
+			<select name="subarea" class="drop">
+				<option value=""><b>Sub Area</b></option>
+				<option value="pathankot">Pathankot</option>
+				<option value="sujanpur">Sujanpur</option>
+				<option value="gurdaspur">Gurdaspur</option>
+				<option value="dinanagar">Dinanagar</option>
+				<option value="nurpur">Nurpur</option>
+			</select>
+			<br><br>
+			<label for="gender"><b>Gender</b></label>
+				<input type="radio" name="gender" value="F">Female
+				<input type="radio" name="gender" value="M">Male
+				<hr>
+			<button type="submit" class="registerbtn"><b>Register<b></button>
+		</div>
+		<div class="container signin">
+		</div>
+	</form>
+</body>
+</html>
